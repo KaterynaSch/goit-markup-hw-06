@@ -153,7 +153,6 @@ button {
 }
 
 .address-text {
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -445,7 +444,7 @@ button {
   line-height: 1.5;
   letter-spacing: 0.02em;
   color: var(--white);
-  min-width: 96px;
+
   margin-bottom: 16px;
 }
 .social-media-link:hover,
@@ -497,7 +496,7 @@ button {
   row-gap: 48px;
   column-gap: 24px;
   --item: 3;
-  width: calc(100% - (var(--indent) * (var(--item) - 1)) / var(--item));
+  width: calc(100% - (var(--indent) * (var(--item) - 1))) / var(--item);
 }
 
 .portfolio {
@@ -595,7 +594,7 @@ button {
   top: calc(50%);
   left: calc(50%);
   transform: translate(-50%, -50%);
-  padding: 24px;
+  padding: 72px 24px 24px;
   width: 408px;
   min-height: 584px;
 
@@ -656,7 +655,7 @@ button {
   letter-spacing: 0.02em;
 
   color: var(--navyblue);
-  margin: 48px 0 16px;
+  margin-bottom: 16px;
 }
 
 .modal-form {
@@ -675,7 +674,6 @@ button {
 .form-label {
   display: block;
   margin-bottom: 4px;
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -713,7 +711,6 @@ button {
 }
 
 .textarea-form {
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -728,9 +725,9 @@ button {
 }
 .agreement-modal {
   display: flex;
-  justify-content: center;
+
   align-items: center;
-  gap: 6px;
+  gap: 8px;
   width: 100%;
   font-weight: 400;
   font-size: 12px;
@@ -738,12 +735,6 @@ button {
   letter-spacing: 0.04em;
   color: var(--lightslate);
   margin-bottom: 24px;
-}
-.agreement-input {
-  appearance: none;
-  display: block;
-  width: 16px;
-  height: 16px;
 }
 
 .checked {
@@ -770,7 +761,7 @@ button {
 .agreement-text {
   display: block;
   width: 338px;
-  font-weight: 400;
+
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
@@ -780,12 +771,7 @@ button {
   margin-left: 80px;
 }
 
-.subscribe-title {
-  min-width: 75px;
-}
-
 .subscribe-input {
-  font-weight: 400;
   font-size: 14px;
   line-height: 2;
   letter-spacing: 0.04em;
@@ -824,6 +810,12 @@ button {
 
   background-color: var(--iris);
   color: var(--white);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--ocean);
 }
 
 .input-form {
@@ -832,12 +824,8 @@ button {
   justify-content: center;
   align-items: center;
   gap: 24px;
-  position: relative;
 }
 
 .icon-sending {
-  position: absolute;
-  top: 8px;
-  right: 24px;
   fill: currentColor;
 }
